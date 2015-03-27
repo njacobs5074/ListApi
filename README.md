@@ -45,6 +45,8 @@ Complete your task by doing the following:
   - Find your fork of the repo from the Travis menu (the "+" on the near the top on the left) and add it to the build.
   - Add the build passing badge. Here is an [example](https://github.com/davidmweber/scopus). It is just a 
     URL you can copy and paste from the Travis site.
+  - Travis builds each time you commit so make and push a small change to see it's effect.
+
 * Make sure the build is green (good)
 * Ensure that your code is properly formatted and commented.
 * Send Andre an email with the URL for your fork of the repo for evaluation
