@@ -36,3 +36,20 @@ tell you what that function is supposed to do. We will also go through the API
 in class.
 
 
+# Finishing up
+
+Complete your task by doing the following:
+
+* Integrate your project into Travis and add a build badge to the README.md in your fork of the project
+  - First, get yourself an account on Travis. Basically, you just log in using your Github account.
+  - Find your fork of the repo from the Travis menu (the "+" on the top left) and add it to the build.
+  - Add the build passing badge. Here is an [example](https://github.com/davidmweber/scopus). It is just a 
+    URL you can copy and paste from the Travis site.
+* Make sure the build is green (good)
+* Ensure that your code is properly formatted and commented.
+* Send Andre an email with the URL for your fork of the repo for evaluation
+* Boom! You are done.
+
+Note that you *have* to have your own fork and have committed the finished code to the forked github repo for this to work.
+
+
