@@ -49,5 +49,10 @@ var List = function() {
     // ......
     return null
   }
+
+  // In place sort of the list from smallest to largest
+  this.sort = function() {
+    //........
+  }
 }
 
