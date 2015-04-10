@@ -6,8 +6,14 @@ var ListItem = function (data, tail) {
 };
 
 // List implementation
-var List = function () {
+var List = function (comparator) {
     this.item = null;
+
+    var defaultComparator = function(arg1, arg2) {
+        return arg1.localeCompare(arg2)
+    };
+
+    this.comparator = comparator == undefined ? defaultComparator : comparator;
 
     // Add a data item to the front of the list
     this.add = function (elem) {
@@ -74,8 +80,8 @@ var List = function () {
             didSwap = false;
 
             console.log("List#sort: pass = " + pass);
-            for (p = this.item; p.tail != null; p = p.tail) {
-                if (p.data.localeCompare(p.tail.data) > 0) {
+            for (var p = this.item; p.tail != null; p = p.tail) {
+                if (this.comparator(p.data, p.tail.data) > 0) {
                     tmp = p.data;
                     p.data = p.tail.data;
                     p.tail.data = tmp;

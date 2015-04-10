@@ -87,7 +87,6 @@ QUnit.test("Sorts a list alphabetically", function (assert) {
     assert.equal(l.pop(), "a");
     assert.equal(l.pop(), "b");
     assert.equal(l.pop(), "c");
-
 });
 
 QUnit.test("Sorts a list of names alphabetically", function (assert) {
@@ -107,22 +106,22 @@ QUnit.test("Sorts a list of names alphabetically", function (assert) {
     assert.equal(l.length(), 0);
 });
 
-QUnit.test("Sorts a list of numbers alphabetically", function (assert) {
-    var l = new List();
+QUnit.test("Sorts a list of numbers", function (assert) {
+    var l = new List(function(arg1, arg2) { return arg1 - arg2; });
 
-    l.add("4");
-    l.add("5");
-    l.add("9");
-    l.add("7");
-    l.add("1");
-    l.add("3");
+    l.add(4489);
+    l.add(5343);
+    l.add(9341);
+    l.add(1235);
+    l.add(1234);
+    l.add(30);
 
     l.sort();
 
-    assert.equal(l.pop(), "1");
-    assert.equal(l.pop(), "3");
-    assert.equal(l.pop(), "4");
-    assert.equal(l.pop(), "5");
-    assert.equal(l.pop(), "7");
-    assert.equal(l.pop(), "9");
+    assert.equal(l.pop(), 30);
+    assert.equal(l.pop(), 1234);
+    assert.equal(l.pop(), 1235);
+    assert.equal(l.pop(), 4489);
+    assert.equal(l.pop(), 5343);
+    assert.equal(l.pop(), 9341);
 });
